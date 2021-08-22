@@ -1,0 +1,4 @@
+:TRR=0 :TPR=0 :TRL=0 :TPL=0 :TRB=0 :TPB=0 a=57.285 b=0.28 c=90 d=180
+if:RFMD>20thene=20elseif:RFMD<10thene=10elsee=:RFMD endend
+f=2.88/(e+4.44) g=1<f*f f/=1-g+f*f*g
+h=-(g*(c-d*(f<0))+(1-2*g)*a*f/(1+b*f*f)) :TPR=h :TPL=h goto2
