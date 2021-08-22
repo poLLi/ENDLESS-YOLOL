@@ -1,0 +1,40 @@
+start> 
+if :approach==1 then
+	:RFM=1
+	
+	if :RFMD>300 then
+		:FcuF=0
+		:FcuB=0
+		goto start
+	else
+		if :RFMD>20 then
+			:FcuB=0
+			:FcuF=:RFMD/20
+			check=0
+			goto start
+		else
+			:FcuF=0
+		end
+		
+		if :RFMD<16 then
+			:FcuF=0
+			:FcuB=200*:RFMD^-0.9-12
+			check=0
+			goto start
+		else
+			:FcuB=0
+		end
+		
+		if :RFMD>=16 and :RFMD<=20 then check++ else goto start end
+		
+		if check>=10 then
+			:RFM=0
+			:approach=0
+		else
+			goto start
+		end
+	end
+else
+	check=0
+	:RFM=0
+end
