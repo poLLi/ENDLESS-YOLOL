@@ -1,0 +1,2 @@
+:GURL=:EPS+(10000-:Battery)/75
+:FuelRods=:Rod1+:Rod2+:Rod3+:Rod4+:Rod5+:Rod6 goto1

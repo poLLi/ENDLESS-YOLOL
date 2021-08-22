@@ -1,0 +1,5 @@
+// Generator Rate Limit
+:GURL=:EPS+(10000-:Battery)/75
+
+// Fuel Calc
+:FuelRods=:Rod1+:Rod2+:Rod3+:Rod4+:Rod5+:Rod6
