@@ -2,5 +2,5 @@ a="Ore" b="Crystal" c="\n" :reset=1
 ifnot :Scanner thengoto6end :Scan=c+c+"Scan in Progress..." :SA=1
 :SI=0 if:SA thengoto2end
 if:SV==0thengoto2end :SI=0 d=:SM-a-b+c+:SV/1728 goto5
-:SI=1 e=:SM-a-b+c+:SV/1728 :scan=c+c+d+c+c+e :SA=1 goto4
+:SI=1 e=:SM-a-b+c+:SV/1728 :scan=c+c+d+c+e :SA=1 goto4
 :SA=0 :SI=0 if:SR==0then:Scan=c+c+"Scanner Offline"end goto2
