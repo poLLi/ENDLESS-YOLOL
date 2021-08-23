@@ -1,0 +1,46 @@
+ore="Ore"
+crystal="Crystal"
+newLine="\n"
+:reset=1
+start> 
+if :Scanner then
+	// start initial scan
+	:Scan=newLine+newLine+"Scan in Progress..."
+	:SA=1
+	:SI=0
+	
+	// throw out if scan still 1 (should reset right after setting)
+	if :SA then
+		goto start
+	end
+	
+	// if no volume scan not work lul, no ore connection
+	scanning> 
+	if :SV==0 then
+		goto start
+	else
+		:SI=0
+		scan1=:SM-ore-crystal+newLine+:SV/1728
+		goto secondscan
+		secondscan> 
+		:SI=1
+		scan2=:SM-ore-crystal+newLine+:SV/1728
+		
+		:scan=newLine+newLine+scan1+newLine+newLine+scan2
+		:SA=1
+		goto scanning
+	end
+	
+else
+	:SA=0
+	:SI=0
+	
+	if :SR==0 then
+		:Scan=newLine+newLine+"Scanner Offline"
+	end
+	
+	goto start
+end
+
+
+
