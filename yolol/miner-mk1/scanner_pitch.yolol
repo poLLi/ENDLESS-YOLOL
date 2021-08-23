@@ -1,0 +1,4 @@
+:TPB=0 a=57.285 b=0.28 c=90 d=180
+if:RFMD>100thene=100elseif:RFMD<7thene=7elsee=:RFMD endend
+f=2.04/(e+4.2) g=1<f*f f/=1-g+f*f*g
+h=-(g*(c-d*(f<0))+(1-2*g)*a*f/(1+b*f*f)) :TPB=h :TRB=-0.05 goto2

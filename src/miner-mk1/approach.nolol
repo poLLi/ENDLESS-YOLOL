@@ -1,6 +1,10 @@
 start> 
 if :approach==1 then
-	:RFM=1
+	
+	if :RFM==0 then
+		:approach=0
+		goto start
+	end
 	
 	if :RFMD>300 then
 		:FcuF=0
@@ -28,7 +32,6 @@ if :approach==1 then
 		if :RFMD>=16 and :RFMD<=20 then check++ else goto start end
 		
 		if check>=10 then
-			:RFM=0
 			:approach=0
 		else
 			goto start
@@ -36,5 +39,4 @@ if :approach==1 then
 	end
 else
 	check=0
-	:RFM=0
 end

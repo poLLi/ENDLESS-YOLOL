@@ -3,7 +3,6 @@
 start> 
 :TPR=0
 :TPL=0
-:TPB=0
 a=401/7
 b=0.28
 n=90
@@ -25,16 +24,3 @@ res=-(g*(n-m*(x<0))+(1-2*g)*a*x/(1+b*x*x))
 :TPR=res
 :TPL=res
 goto initial
-
-
-
-
-
-
-
-
-
-
-
-
-

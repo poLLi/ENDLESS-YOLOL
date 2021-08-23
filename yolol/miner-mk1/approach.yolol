@@ -1,7 +1,6 @@
-if:approach!=1thengoto7end :RFM=1
-if:RFMD>300then:FcuF=0 :FcuB=0 goto1end
-if:RFMD>20then:FcuB=0 :FcuF=:RFMD/20 b=0 goto1else:FcuF=0end
-if:RFMD<16then:FcuF=0 :FcuB=200*:RFMD^-0.9-12 b=0 goto1else:FcuB=0end
-if:RFMD>=16 and :RFMD<=20thenb++elsegoto1end
-ifb>=10then:RFM=0 :approach=0elsegoto1end goto1
-b=0 :RFM=0 goto1
+if:approach!=1thengoto6end if:RFMD>300then:FcuF=0 :FcuB=0 goto1end
+if:RFMD>20then:FcuB=0 :FcuF=:RFMD/20 a=0 goto1else:FcuF=0end
+if:RFMD<16then:FcuF=0 :FcuB=200*:RFMD^-0.9-12 a=0 goto1else:FcuB=0end
+if:RFMD>=16 and :RFMD<=20thena++elsegoto1end
+ifa>=10then:approach=0elsegoto1end goto1
+a=0 goto1
