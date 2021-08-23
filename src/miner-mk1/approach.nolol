@@ -11,16 +11,16 @@ if :approach==1 then
 		:FcuB=0
 		goto start
 	else
-		if :RFMD>20 then
+		if :RFMD>17 then
 			:FcuB=0
-			:FcuF=:RFMD/20
+			:FcuF=:RFMD/25
 			check=0
 			goto start
 		else
 			:FcuF=0
 		end
 		
-		if :RFMD<16 then
+		if :RFMD<14 then
 			:FcuF=0
 			:FcuB=200*:RFMD^-0.9-12
 			check=0
@@ -29,7 +29,7 @@ if :approach==1 then
 			:FcuB=0
 		end
 		
-		if :RFMD>=16 and :RFMD<=20 then check++ else goto start end
+		if :RFMD>=14 and :RFMD<=17 then check++ else goto start end
 		
 		if check>=10 then
 			:approach=0
