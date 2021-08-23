@@ -1,0 +1,40 @@
+// Rotation: 1.3
+// Right Pitch -8 Left Pitch 7.8
+start> 
+:TPR=0
+:TPL=0
+:TPB=0
+a=401/7
+b=0.28
+n=90
+m=180
+initial> 
+if :RFMD>17 then
+	distance=17
+else
+	if :RFMD<7 then
+		distance=7
+	else
+		distance=:RFMD
+	end
+end
+x=2.76/(distance+3.5)
+g=1<x*x
+x/=1-g+x*x*g
+res=-(g*(n-m*(x<0))+(1-2*g)*a*x/(1+b*x*x))
+:TPR=res
+:TPL=res
+goto initial
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+:TRR=0 :TRL=0 :TRB=0 a=57.285 b=0.28 c=90 d=180
+if:RFMD>17thene=17elseif:RFMD<7thene=7elsee=:RFMD endend
+f=0.48/(e+3.5) g=1<f*f f/=1-g+f*f*g
+h=g*(c-d*(f<0))+(1-2*g)*a*f/(1+b*f*f) :TRR=h :TRL=-h goto2
