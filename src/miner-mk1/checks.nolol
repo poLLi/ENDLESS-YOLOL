@@ -1,0 +1,43 @@
+// Basic Checks around the ship
+
+// Door Check
+if :hatch or :cockpit then
+	:DoorCheck=1
+else
+	:DoorCheck=0
+end
+
+// Propellant
+if :Propellant<1000 then
+	:PropellantCheck=1
+else
+	:PropellantCheck=0
+end
+
+// FuelRod Check
+if :FuelRods<1000 then
+	:FuelRodCheck=1
+else
+	:FuelRodCheck=0
+end
+
+// Coolant Check
+if :Coolant<2500 then
+	:CoolantCheck=1
+else
+	:CoolantCheck=0
+end
+
+// SaveZone Check
+if :SafeZone then
+	:SafeZoneLight=1
+else
+	:SafeZoneLight=0
+end
+
+// Durabillity Checks
+if :DurabilityErrors>0 then
+	:DuraLight=1
+else
+	:DuraLight=0
+end

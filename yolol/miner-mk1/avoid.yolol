@@ -1,0 +1,18 @@
+if:Avoid!=1thengoto18end :RFTR=1 :RFTL=1 :RFBR=1 :RFBL=1 :RFM=1
+if:RFTRD>=500thengoto4end :WarnTopRight=1 :FcuRightLeft=-50
+:FcuUpDown=-50 goto5
+:WarnTopRight=0 :FcuRightLeft=0 :FcuUpDown=0
+if:RFBRD>=500thengoto7end :WarnBotRight=1 :FcuRightLeft=-50
+:FcuUpDown=50 goto8
+:WarnBotRight=0 :FcuRightLeft=0 :FcuUpDown=0
+if:RFTLD>=500thengoto10end :WarnTopLeft=1 :FcuRightLeft=50
+:FcuUpDown=-50 goto11
+:WarnTopLeft=0 :FcuRightLeft=0 :FcuUpDown=0
+if:RFBLD>=500thengoto13end :WarnBotLeft=1 :FcuRightLeft=50
+:FcuUpDown=50 goto14
+:WarnBotLeft=0 :FcuRightLeft=0 :FcuUpDown=0
+if:RFMD>=500thengoto16end :WarnBotLeft=1 :WarnBotRight=1
+:FcuRotationalPitch=-25 goto1
+:WarnBotLeft=0 :WarnBotRight=0 :FcuRightLeft=0 :FcuRotationalPitch=0
+goto1
+:RFTR=0 :RFTL=0 :RFBR=0 :RFBL=0 goto1

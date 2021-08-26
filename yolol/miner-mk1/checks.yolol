@@ -1,0 +1,6 @@
+if:hatch or :cockpit then:DoorCheck=1else:DoorCheck=0end
+if:Propellant<1000then:PropellantCheck=1else:PropellantCheck=0end
+if:FuelRods<1000then:FuelRodCheck=1else:FuelRodCheck=0end
+if:Coolant<2500then:CoolantCheck=1else:CoolantCheck=0end
+if:SafeZone then:SafeZoneLight=1else:SafeZoneLight=0end
+if:DurabilityErrors>0then:DuraLight=1else:DuraLight=0end goto1

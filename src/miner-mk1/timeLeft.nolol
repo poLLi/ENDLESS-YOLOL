@@ -1,0 +1,38 @@
+// Time Left on Prop / Fuel
+// Fuel Chamber T2 input = 60/s
+// Fuel Rod T2 = 300.000
+include "std/logic"
+
+fuelLine="\n\nFuel: "
+propLine="\nProp: "
+hour="h"
+fuelRod=:StoredRawFuel
+fuelProcessRate=60
+c=100
+
+start> 
+rawFuelConsumtion=:FuelChamberUnitRate/100*fuelProcessRate
+
+if rawFuelConsumtion<=1 then
+	fuelTimeText=fuelLine+"inf"
+else
+	fuelTimeLeft=fuelRod/rawFuelConsumtion/60/60/c*c
+	fuelTimeText=fuelLine+fuelTimeLeft+hour
+end
+
+
+
+prop=:Propellant; timer=time()+4; startTimer=time()
+logic_wait(time()<timer)
+propNow=:Propellant; stopTimer=time()-startTimer
+
+propDif=prop-propNow
+
+if propDif==0 then
+	porpTimeText=propLine+"inf"
+else
+	porpTimeLeft=:Propellant/propDif/60/60/c*c
+	porpTimeText=propLine+porpTimeLeft+hour
+end
+
+:Times=fuelTimeText+porpTimeText

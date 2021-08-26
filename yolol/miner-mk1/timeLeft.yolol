@@ -1,0 +1,7 @@
+a++ b="\n\nFuel: " c="\nProp: " d="h" e=:StoredRawFuel f=60 g=100
+a++ h=:FuelChamberUnitRate/100*f
+a++ ifh<=1theni=b+"inf"elsej=e/h/60/60/g*g i=b+j+d end
+a++ k=:Propellant l=a+4 m=a
+a++ ifa<l thengoto5end n=:Propellant o=a-m p=k-n
+a++ ifp==0thenq=c+"inf"elser=:Propellant/p/60/60/g*g q=c+r+d end
+a++ :Times=i+q goto1

@@ -1,0 +1,72 @@
+// Scuffed Avoid System
+// Rangefinder:
+// ---- :RFTR / :RFTRD = Top Right
+// ---- :RFTL / :RFTLD = Top Left
+// ---- :RFBR / :RFBRD = Bottom Right
+// ---- :RFBL / :RFBLD = Bottom Light
+// Button: :Avoid
+if :Avoid==1 then
+	:RFTR=1
+	:RFTL=1
+	:RFBR=1
+	:RFBL=1
+	:RFM=1
+	
+	if :RFTRD<500 then
+		:WarnTopRight=1
+		:FcuRightLeft=-50
+		:FcuUpDown=-50
+	else
+		:WarnTopRight=0
+		:FcuRightLeft=0
+		:FcuUpDown=0
+	end
+	
+	if :RFBRD<500 then
+		:WarnBotRight=1
+		:FcuRightLeft=-50
+		:FcuUpDown=50
+	else
+		:WarnBotRight=0
+		:FcuRightLeft=0
+		:FcuUpDown=0
+	end
+	
+	if :RFTLD<500 then
+		:WarnTopLeft=1
+		:FcuRightLeft=50
+		:FcuUpDown=-50
+	else
+		:WarnTopLeft=0
+		:FcuRightLeft=0
+		:FcuUpDown=0
+	end
+	
+	if :RFBLD<500 then
+		:WarnBotLeft=1
+		:FcuRightLeft=50
+		:FcuUpDown=50
+	else
+		:WarnBotLeft=0
+		:FcuRightLeft=0
+		:FcuUpDown=0
+	end
+	
+	if :RFMD<500 then
+		:WarnBotLeft=1
+		:WarnBotRight=1
+		:FcuRotationalPitch=-25
+	else
+		:WarnBotLeft=0
+		:WarnBotRight=0
+		:FcuRightLeft=0
+		:FcuRotationalPitch=0
+	end
+	
+else
+	:RFTR=0
+	:RFTL=0
+	:RFBR=0
+	:RFBL=0
+end
+

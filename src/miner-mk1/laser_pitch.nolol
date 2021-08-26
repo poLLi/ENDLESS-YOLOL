@@ -19,6 +19,6 @@ x=2.76/(distance+3.5)
 g=1<x*x
 x/=1-g+x*x*g
 res=-(g*(n-m*(x<0))+(1-2*g)*a*x/(1+b*x*x))
-:TPR=res
-:TPL=res
+:TPR=res+:MT
+:TPL=res+:MT
 goto initial

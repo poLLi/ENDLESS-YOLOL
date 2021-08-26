@@ -1,0 +1,3 @@
+if(not :RFM) or :Warn_Off!=0thengoto3end
+if:RFMD<10then:WarnLight=1 goto3else:WarnLight=0end
+:WarnLight=0 goto1

@@ -1,0 +1,12 @@
+// Warning Lights
+start> 
+if :RFM and :Warn_Off==0 then
+	if :RFMD<10 then
+		:WarnLight=1
+		goto stop
+	else
+		:WarnLight=0
+	end
+end
+stop> 
+:WarnLight=0
